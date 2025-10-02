@@ -22,6 +22,7 @@ int binarysearch(int key) {
 
   while (low <= high) {
     middle = (low + high) / 2;
+    printf("low:%d mid:%d, high:%d\n", low, middle, high);
     if (key == table[middle].key) {
       return table[middle].data;
     } else if (key < table[middle].key) {
@@ -29,7 +30,6 @@ int binarysearch(int key) {
     } else {
       low = middle - 1;
     }
-    printf("low:%d mid:%d, high:%d\n", low, middle, high);
   }
   return -1;
 }
