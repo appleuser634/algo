@@ -24,6 +24,8 @@ pub fn binary_search(key: i32) i32 {
         const mid = (high + low) / 2;
         const mid_key = table[mid].key;
 
+        print("low:{any} mid:{any} high:{any}\n", .{ low, mid_key, high });
+
         if (key == mid_key) {
             return table[mid].data;
         } else if (key < mid_key) {
